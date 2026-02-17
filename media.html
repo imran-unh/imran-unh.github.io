@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Media | Imran Khan Ph.D.</title>
+  <meta name="description" content="Media appearances, talks, and outreach by Imran Khan (Cryosphere, Glaciers and Glacial Lakes, Remote Sensing)." />
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111827;
+      --muted:#4b5563;
+      --border:#e5e7eb;
+      --soft:#f7f7f8;
+      --link:#0b5fff;
+      --max: 900px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.75;
+    }
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    .wrap{ max-width:var(--max); margin:0 auto; padding:34px 16px 80px; }
+
+    /* Top navigation */
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:10px 0 18px;
+      border-bottom:1px solid var(--border);
+      margin-bottom:26px;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center;
+      color:var(--text); text-decoration:none; font-weight:800;
+    }
+    .ik{
+      width:38px; height:38px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:var(--soft);
+      display:flex; align-items:center; justify-content:center;
+      font-weight:900;
+    }
+    .navlinks{ display:flex; gap:10px; flex-wrap:wrap; }
+    .btn{
+      display:inline-block;
+      padding:9px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:#fff;
+      color:var(--text);
+      font-weight:650;
+    }
+    .btn.active{
+      background:var(--text);
+      color:#fff;
+      border-color:var(--text);
+    }
+
+    h1{ margin:0 0 8px; font-size:34px; letter-spacing:-0.02em; }
+    .subtitle{ margin:0 0 18px; color:var(--muted); }
+
+    .card{
+      background:var(--soft);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px;
+      margin:18px 0;
+    }
+
+    .date{
+      font-size:14px;
+      color:var(--muted);
+      margin-bottom:8px;
+      font-weight:600;
+    }
+
+    .video{
+      width:100%;
+      height:360px;
+      border-radius:12px;
+      border:none;
+      margin-top:12px;
+    }
+
+    footer{
+      margin-top:32px;
+      padding-top:18px;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    @media (max-width: 768px){
+      .video{ height:220px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- Navigation -->
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <div class="ik">IK</div>
+      </a>
+
+      <div class="navlinks">
+        <a class="btn" href="index.html">Home</a>
+        <a class="btn" href="research.html">Research</a>
+        <a class="btn" href="publications.html">Publications</a>
+        <a class="btn active" href="media.html">Media</a>
+        <a class="btn" href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <h1>Media & Outreach</h1>
+    <p class="subtitle">
+      Talks, competitions, and outreach related to cryosphere research, glacial lakes, and climate hazards.
+    </p>
+
+    <!-- March 2025 -->
+    <div class="card">
+      <div class="date">March 2025</div>
+      <h3>Three Minute Thesis (3MT) Competition – University of New Hampshire</h3>
+      <p>
+        Presented my Ph.D. research on glacial lake monitoring and cryosphere hazards in a 3-minute
+        research communication format, highlighting the societal importance of monitoring glacial
+        lakes under climate change.
+      </p>
+
+      <iframe class="video"
+        src="https://media.unh.edu/embed/1_ngs3vavv"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- December 2024 -->
+    <div class="card">
+      <div class="date">December 2024</div>
+      <h3>Purdue University – Superheroes of Science</h3>
+      <p>
+        Talked about my research on glacial lakes, remote sensing, and why monitoring
+        cryosphere hazards is critical for climate resilience and downstream communities.
+      </p>
+
+      <iframe class="video"
+        src="https://www.youtube.com/embed/eXrnMNsvxBQ"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- December 2023 -->
+    <div class="card">
+      <div class="date">December 2023</div>
+      <h3>New Hampshire Social Venture Innovation Challenge – GLOFWatch</h3>
+      <p>
+        Presented GLOFWatch, an idea integrating satellite imagery and weather data to provide early
+        warning for glacial lake outburst floods (GLOFs). The project received the
+        <b>Most Impact Potential Award</b>.
+      </p>
+
+      <iframe class="video"
+        src="https://www.youtube.com/embed/SC4EoWKhfHE"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <footer>
+      © <span id="yr"></span> Imran Khan • Built with GitHub Pages
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("yr").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
