@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Imran Khan Ph.D.</title>
+  <meta name="description" content="Contact information for Imran Khan Ph.D.." />
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111827;
+      --muted:#4b5563;
+      --border:#e5e7eb;
+      --soft:#f7f7f8;
+      --link:#0b5fff;
+      --max: 900px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.75;
+    }
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    .wrap{ max-width:var(--max); margin:0 auto; padding:34px 16px 80px; }
+
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:10px 0 18px;
+      border-bottom:1px solid var(--border);
+      margin-bottom:26px;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      color:var(--text); text-decoration:none; font-weight:800;
+      letter-spacing:0.02em;
+    }
+    .brand .ik{
+      width:38px; height:38px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:var(--soft);
+      display:flex; align-items:center; justify-content:center;
+      font-weight:900;
+    }
+    .navlinks{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .btn{
+      display:inline-block;
+      padding:9px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:#fff;
+      color:var(--text);
+      font-weight:650;
+    }
+    .btn.active{
+      background:var(--text);
+      color:#fff;
+      border-color:var(--text);
+    }
+
+    h1{ margin:0 0 8px; font-size:34px; letter-spacing:-0.02em; }
+    .subtitle{ margin:0 0 18px; color:var(--muted); }
+
+    .card{
+      background:var(--soft);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px;
+      margin:14px 0;
+    }
+
+    .row{ padding:10px 0; border-top:1px solid var(--border); }
+    .row:first-child{ border-top:none; }
+
+    footer{
+      margin-top:32px;
+      padding-top:18px;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      font-size:14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="nav">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="ik">IK</span>
+      </a>
+
+      <div class="navlinks">
+        <a class="btn" href="index.html">Home</a>
+        <a class="btn" href="publications.html">Publications</a>
+        <a class="btn active" href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <h1>Contact</h1>
+    <p class="subtitle">Get in touch or connect through the platforms below.</p>
+
+    <div class="card">
+      <div class="row">
+        <b>Email</b><br/>
+        <a href="mailto:imran.khan@unh.edu">imran.khan@unh.edu</a>
+      </div>
+
+      <div class="row">
+        <b>ORCID</b><br/>
+        <a href="https://orcid.org/0000-0001-5632-5857" target="_blank" rel="noopener">
+          0000-0001-5632-5857
+        </a>
+      </div>
+
+      <div class="row">
+        <b>LinkedIn</b><br/>
+        <a href="https://www.linkedin.com/in/imran-khan-unh/" target="_blank" rel="noopener">
+          linkedin.com/in/imran-khan-unh/
+        </a>
+      </div>
+
+      <div class="row">
+        <b>GitHub</b><br/>
+        <a href="https://github.com/imran-unh" target="_blank" rel="noopener">
+          github.com/imran-unh
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      © <span id="yr"></span> Imran Khan • Built with GitHub Pages
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("yr").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
