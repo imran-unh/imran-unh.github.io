@@ -75,20 +75,48 @@
       padding:18px;
     }
 
-    /* NEW: Home hero image block */
+    /* Glacier hero image with overlay labels */
     .hero-image{
       margin-top:18px;
       border-radius:16px;
       overflow:hidden;
       border:1px solid var(--border);
-      background:#fff;
+      position:relative;
     }
     .hero-image img{
       width:100%;
-      height:320px;           /* adjust if you want taller/shorter */
-      object-fit: cover;      /* clean crop */
-      object-position: 50% 30%; /* slightly below top; change to 50% 20% for more top */
+      height:320px;
+      object-fit: cover;
+      object-position: 50% 30%; /* slightly below top crop */
       display:block;
+    }
+
+    /* Bottom-left label */
+    .image-label-left{
+      position:absolute;
+      bottom:12px;
+      left:16px;
+      background:rgba(0,0,0,0.55);
+      color:#ffffff;
+      padding:6px 10px;
+      border-radius:8px;
+      font-size:14px;
+      font-weight:600;
+      backdrop-filter: blur(2px);
+    }
+
+    /* Bottom-right label */
+    .image-label-right{
+      position:absolute;
+      bottom:12px;
+      right:16px;
+      background:rgba(0,0,0,0.55);
+      color:#ffffff;
+      padding:6px 10px;
+      border-radius:8px;
+      font-size:13px;
+      font-weight:500;
+      backdrop-filter: blur(2px);
     }
 
     footer{
@@ -98,7 +126,9 @@
     }
 
     @media (max-width: 768px){
-      .hero-image img{ height:220px; }
+      .hero-image img{
+        height:220px;
+      }
     }
   </style>
 </head>
@@ -128,17 +158,18 @@
     <div class="card">
       <p style="margin:0">
         I am a researcher focusing on glacial lakes and their long-term as well as seasonal dynamics,
-        factors controlling the formation and seasonal evolution of supraglacial lakes, and
+        factors controlling the formation and seasonal evolution of supraglacial lakes, and 
         glacier-lake-climate interactions. My work combines satellite remote sensing, geospatial
-        analysis, and hazard modeling to improve understanding of outburst flood risks in
+        analysis, and hazard modeling to improve understanding of outburst flood risks in 
         high-mountain environments.
       </p>
     </div>
 
-    <!-- NEW: Glacier image under the description -->
-    <!-- Image is in the same place as agu_2023.jpg (repo root), so use just the filename -->
+    <!-- Glacier Image (same location as AGU image, repo root) -->
     <div class="hero-image">
-      <img src="baltoro-glacier.jpg" alt="Glacier landscape (cryosphere research)" />
+      <img src="baltoro-glacier.jpg" alt="Baltoro Glacier">
+      <div class="image-label-left">Baltoro Glacier</div>
+      <div class="image-label-right">Source: ESA</div>
     </div>
 
     <footer>
