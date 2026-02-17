@@ -79,7 +79,9 @@
       font-size:14px;
       color:var(--muted);
       margin-bottom:8px;
-      font-weight:600;
+      font-weight:700;
+      letter-spacing:0.02em;
+      text-transform:uppercase;
     }
 
     .video{
@@ -88,6 +90,36 @@
       border-radius:12px;
       border:none;
       margin-top:12px;
+      background:#000;
+    }
+
+    .actionrow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top:12px;
+    }
+    .action{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:#fff;
+      color:var(--text);
+      font-weight:700;
+    }
+    .action.primary{
+      background:var(--text);
+      color:#fff;
+      border-color:var(--text);
+    }
+    .note{
+      margin-top:10px;
+      font-size:14px;
+      color:var(--muted);
     }
 
     footer{
@@ -109,7 +141,7 @@
 
     <!-- Navigation -->
     <div class="nav">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="Home">
         <div class="ik">IK</div>
       </a>
 
@@ -124,7 +156,7 @@
 
     <h1>Media & Outreach</h1>
     <p class="subtitle">
-      Talks, competitions, and outreach related to cryosphere research, glacial lakes, and climate hazards.
+      Selected talks, competitions, and outreach related to cryosphere research, glacial lakes, and climate hazards.
     </p>
 
     <!-- March 2025 -->
@@ -132,15 +164,27 @@
       <div class="date">March 2025</div>
       <h3>Three Minute Thesis (3MT) Competition – University of New Hampshire</h3>
       <p>
-        Presented my Ph.D. research on glacial lake monitoring and cryosphere hazards in a 3-minute
-        research communication format, highlighting the societal importance of monitoring glacial
-        lakes under climate change.
+        Presented my Ph.D. research on glacial lake monitoring and cryosphere hazards in the Three Minute Thesis (3MT)
+        competition, communicating the importance of monitoring glacial lakes under climate change in a concise format.
       </p>
 
-      <iframe class="video"
-        src="https://media.unh.edu/embed/1_ngs3vavv"
-        allowfullscreen>
-      </iframe>
+      <!-- UNH Media blocks external iframe embedding, so use a clean button instead -->
+      <div class="actionrow">
+        <a class="action primary"
+           href="https://media.unh.edu/playlist/dedicated/299879822/1_hvn2wa82/1_ngs3vavv"
+           target="_blank" rel="noopener">
+          ▶ Watch 3MT Presentation
+        </a>
+        <a class="action"
+           href="https://media.unh.edu/playlist/dedicated/299879822/1_hvn2wa82/1_ngs3vavv"
+           target="_blank" rel="noopener">
+          Open on UNH Media
+        </a>
+      </div>
+
+      <div class="note">
+        Note: UNH Media may restrict embedding on external sites, so the video opens in a new tab.
+      </div>
     </div>
 
     <!-- December 2024 -->
@@ -148,14 +192,24 @@
       <div class="date">December 2024</div>
       <h3>Purdue University – Superheroes of Science</h3>
       <p>
-        Talked about my research on glacial lakes, remote sensing, and why monitoring
-        cryosphere hazards is critical for climate resilience and downstream communities.
+        Talked about my research on glacial lakes and remote sensing, and why monitoring cryosphere hazards is important
+        for climate resilience and downstream communities.
       </p>
 
       <iframe class="video"
         src="https://www.youtube.com/embed/eXrnMNsvxBQ"
+        title="Purdue University Superheroes of Science - Imran Khan"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
       </iframe>
+
+      <div class="actionrow">
+        <a class="action"
+           href="https://www.youtube.com/watch?v=eXrnMNsvxBQ"
+           target="_blank" rel="noopener">
+          Open on YouTube
+        </a>
+      </div>
     </div>
 
     <!-- December 2023 -->
@@ -163,15 +217,24 @@
       <div class="date">December 2023</div>
       <h3>New Hampshire Social Venture Innovation Challenge – GLOFWatch</h3>
       <p>
-        Presented GLOFWatch, an idea integrating satellite imagery and weather data to provide early
-        warning for glacial lake outburst floods (GLOFs). The project received the
-        <b>Most Impact Potential Award</b>.
+        Presented <b>GLOFWatch</b>, an idea that combines satellite imagery and weather updates to provide early warnings
+        for glacial lake outburst floods (GLOFs), and received the <b>Most Impact Potential Award</b>.
       </p>
 
       <iframe class="video"
         src="https://www.youtube.com/embed/SC4EoWKhfHE"
+        title="NH Social Venture Innovation Challenge - GLOFWatch"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
       </iframe>
+
+      <div class="actionrow">
+        <a class="action"
+           href="https://www.youtube.com/watch?v=SC4EoWKhfHE&t=1s"
+           target="_blank" rel="noopener">
+          Open on YouTube
+        </a>
+      </div>
     </div>
 
     <footer>
