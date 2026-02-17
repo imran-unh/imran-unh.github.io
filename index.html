@@ -75,10 +75,30 @@
       padding:18px;
     }
 
+    /* NEW: Home hero image block */
+    .hero-image{
+      margin-top:18px;
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background:#fff;
+    }
+    .hero-image img{
+      width:100%;
+      height:320px;           /* adjust if you want taller/shorter */
+      object-fit: cover;      /* clean crop */
+      object-position: 50% 30%; /* slightly below top; change to 50% 20% for more top */
+      display:block;
+    }
+
     footer{
       margin-top:30px;
       color:var(--muted);
       font-size:14px;
+    }
+
+    @media (max-width: 768px){
+      .hero-image img{ height:220px; }
     }
   </style>
 </head>
@@ -108,11 +128,17 @@
     <div class="card">
       <p style="margin:0">
         I am a researcher focusing on glacial lakes and their long-term as well as seasonal dynamics,
-        factors controlling the formation and seasonal evolution of supraglacial lakes, and 
+        factors controlling the formation and seasonal evolution of supraglacial lakes, and
         glacier-lake-climate interactions. My work combines satellite remote sensing, geospatial
-        analysis, and hazard modeling to improve understanding of outburst flood risks in 
+        analysis, and hazard modeling to improve understanding of outburst flood risks in
         high-mountain environments.
       </p>
+    </div>
+
+    <!-- NEW: Glacier image under the description -->
+    <!-- Image is in the same place as agu_2023.jpg (repo root), so use just the filename -->
+    <div class="hero-image">
+      <img src="baltoro-glacier.jpg" alt="Glacier landscape (cryosphere research)" />
     </div>
 
     <footer>
