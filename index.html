@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Imran Khan Ph.D. | Cryosphere • Glaciers and Glacial Lakes • Remote Sensing</title>
-  <meta name="description" content="Imran Khan Ph.D. — Cryosphere, Glaciers and Glacial Lakes, Remote Sensing. Supraglacial lake dynamics and outburst flood hazard assessment." />
+  <meta name="description" content="Imran Khan Ph.D. — Cryosphere, Glaciers and Glacial Lakes, Remote Sensing. Glacial lake mapping, supraglacial lake dynamics, and outburst flood hazard assessment." />
 
   <style>
     :root{
@@ -26,35 +26,55 @@
     }
     a{ color:var(--link); text-decoration:none; }
     a:hover{ text-decoration:underline; }
-    .wrap{ max-width:var(--max); margin:0 auto; padding:70px 16px 80px; }
-    h1{ margin:0 0 10px; font-size:46px; letter-spacing:-0.02em; }
-    .subtitle{
-      margin:0 0 22px;
-      color:var(--muted);
-      font-size:18px;
+    .wrap{ max-width:var(--max); margin:0 auto; padding:34px 16px 80px; }
+
+    /* Top bar */
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:10px 0 18px;
+      border-bottom:1px solid var(--border);
+      margin-bottom:34px;
+      gap:14px;
     }
-    .card{
-      background:var(--soft);
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      color:var(--text); text-decoration:none; font-weight:800;
+      letter-spacing:0.02em;
+    }
+    .brand .ik{
+      width:38px; height:38px;
+      border-radius:12px;
       border:1px solid var(--border);
-      border-radius:16px;
-      padding:18px;
+      background:var(--soft);
+      display:flex; align-items:center; justify-content:center;
+      font-weight:900;
     }
-    .btnrow{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
+    .navlinks{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
     .btn{
       display:inline-block;
-      padding:10px 12px;
+      padding:9px 12px;
       border-radius:12px;
       border:1px solid var(--border);
       background:#fff;
       color:var(--text);
       font-weight:650;
     }
-    .btn.primary{
+    .btn.active{
       background:var(--text);
       color:#fff;
       border-color:var(--text);
     }
-    .small{ font-size:14px; color:var(--muted); margin-top:14px; }
+
+    h1{ margin:0 0 10px; font-size:46px; letter-spacing:-0.02em; }
+    .subtitle{ margin:0 0 22px; color:var(--muted); font-size:18px; }
+
+    .card{
+      background:var(--soft);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px;
+    }
+
     footer{
       margin-top:30px;
       color:var(--muted);
@@ -65,29 +85,31 @@
 
 <body>
   <div class="wrap">
+
+    <div class="nav">
+      <!-- IK button on top-left -->
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="ik">IK</span>
+      </a>
+
+      <!-- Buttons on top-right -->
+      <div class="navlinks">
+        <a class="btn active" href="index.html">Home</a>
+        <a class="btn" href="publications.html">Publications</a>
+        <a class="btn" href="contact.html">Contact</a>
+      </div>
+    </div>
+
     <h1>Imran Khan Ph.D.</h1>
     <p class="subtitle">Cryosphere • Glaciers and Glacial Lakes • Remote Sensing</p>
 
     <div class="card">
       <p style="margin:0">
-        I am a researcher focusing on glacial lake dynamics under a changing climate,
-        factors controlling the formation and seasonal evolution of supraglacial lakes,
-        and glacier-lake-climate interactions. My work combines satellite remote sensing,
-        geospatial analysis, and hazard modeling to improve understanding of outburst flood
-        risks in high-mountain environments.
-      </p>
-
-      <div class="btnrow">
-        <!-- Upload your CV to the repo and name it: cv.pdf -->
-        <a class="btn primary" href="cv.pdf">Download CV</a>
-        <a class="btn" href="mailto:imran.khan@unh.edu">Email</a>
-        <a class="btn" href="https://orcid.org/0000-0001-5632-5857" target="_blank" rel="noopener">ORCID</a>
-        <a class="btn" href="https://github.com/imran-unh" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="publications.html">Publications</a>
-      </div>
-
-      <p class="small">
-        University of New Hampshire (Ph.D.) • Dissertation: <em>Advancing Glacial Lake Mapping and Monitoring using Synthetic Aperture Radar Data</em>
+        I am a researcher focusing on long-term as well as seasonal dynamics of glacial lakes,
+        factors controlling the formation and seasonal evolution of supraglacial lakes, and 
+        glacier-lake-climate interactions. My work combines satellite remote sensing, geospatial
+        analysis, and hazard modeling to improve understanding of outburst flood risks in 
+        high-mountain environments.
       </p>
     </div>
 
