@@ -93,12 +93,20 @@
       background:#000;
     }
 
-    .media-img{
-      width:100%;
-      border-radius:12px;
+    /* Thumbnail block */
+    .thumb-wrap{
       margin-top:12px;
+      border-radius:12px;
+      overflow:hidden;
       border:1px solid var(--border);
+      background:#fff;
+    }
+    .thumb{
+      width:100%;
+      height:240px;            /* thumbnail height */
+      object-fit:cover;        /* crops nicely */
       display:block;
+      cursor: zoom-in;
     }
 
     .actionrow{
@@ -140,6 +148,7 @@
 
     @media (max-width: 768px){
       .video{ height:220px; }
+      .thumb{ height:180px; }
     }
   </style>
 </head>
@@ -182,11 +191,6 @@
            target="_blank" rel="noopener">
           ▶ Watch 3MT Presentation
         </a>
-        <a class="action"
-           href="https://media.unh.edu/playlist/dedicated/299879822/1_hvn2wa82/1_ngs3vavv"
-           target="_blank" rel="noopener">
-          Open on UNH Media
-        </a>
       </div>
 
       <div class="note">
@@ -211,38 +215,36 @@
       </iframe>
 
       <div class="actionrow">
-        <a class="action"
-           href="https://www.youtube.com/watch?v=eXrnMNsvxBQ"
-           target="_blank" rel="noopener">
+        <a class="action" href="https://www.youtube.com/watch?v=eXrnMNsvxBQ" target="_blank" rel="noopener">
           Open on YouTube
         </a>
       </div>
     </div>
 
-    <!-- December 2023 (AGU) -->
+    <!-- December 2023 (AGU photo) -->
     <div class="card">
       <div class="date">December 2023</div>
       <h3>AGU Fall Meeting 2023 – Research Presentation</h3>
       <p>
-        Presented my research at the American Geophysical Union (AGU) Fall Meeting, highlighting glacial lakes in the Upper Indus Basin.
+        Presented my research at the American Geophysical Union (AGU) Fall Meeting, highlighting remote sensing
+        approaches for mapping and monitoring glacial lakes in high-mountain environments.
       </p>
 
-      <!-- Upload your image to: images/agu_2023.jpg -->
-      <img class="media-img"
-           src="agu_2023.jpg"
-           alt="AGU Fall Meeting 2023 Presentation">
-
+      <!-- Thumbnail: click opens full image -->
+      <a href="agu_2023.jpg" target="_blank" rel="noopener" aria-label="View full image from AGU 2023">
+        <div class="thumb-wrap">
+          <img class="thumb" src="agu_2023.jpg" alt="Imran Khan presenting at AGU Fall Meeting 2023">
+        </div>
+      </a>
 
       <div class="actionrow">
-        <a class="action"
-           href="images/agu_2023.jpg"
-           target="_blank" rel="noopener">
+        <a class="action" href="agu_2023.jpg" target="_blank" rel="noopener">
           View Full Image
         </a>
       </div>
 
       <div class="note">
-
+        Tip: If you want a different crop, tell me what part should be visible (center, left, right) and I’ll adjust it.
       </div>
     </div>
 
@@ -263,9 +265,7 @@
       </iframe>
 
       <div class="actionrow">
-        <a class="action"
-           href="https://www.youtube.com/watch?v=SC4EoWKhfHE&t=1s"
-           target="_blank" rel="noopener">
+        <a class="action" href="https://www.youtube.com/watch?v=SC4EoWKhfHE&t=1s" target="_blank" rel="noopener">
           Open on YouTube
         </a>
       </div>
