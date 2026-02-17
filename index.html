@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Imran Khan | PhD Researcher (Cryosphere & Remote Sensing)</title>
-  <meta name="description" content="Imran Khan — PhD (Civil & Environmental Engineering). Research: SAR-based glacial lake mapping, seasonal supraglacial lake dynamics, glacier–lake–climate interactions, and outburst flood modeling." />
+  <title>Imran Khan | Cryosphere • Glaciers and Glacial Lakes • Remote Sensing</title>
+  <meta name="description" content="Imran Khan — Cryosphere, Glaciers and Glacial Lakes, Remote Sensing. Supraglacial lake dynamics and outburst flood hazard assessment." />
 
   <style>
     :root{
@@ -14,7 +14,7 @@
       --border:#e5e7eb;
       --soft:#f7f7f8;
       --link:#0b5fff;
-      --max: 980px;
+      --max: 900px;
     }
     *{ box-sizing:border-box; }
     body{
@@ -26,44 +26,24 @@
     }
     a{ color:var(--link); text-decoration:none; }
     a:hover{ text-decoration:underline; }
-    .wrap{ max-width:var(--max); margin:0 auto; padding:30px 16px 70px; }
-
-    /* Top nav */
-    nav{
-      display:flex; flex-wrap:wrap; gap:14px;
-      padding:10px 0 18px;
-      border-bottom:1px solid var(--border);
-      margin-bottom:26px;
+    .wrap{ max-width:var(--max); margin:0 auto; padding:70px 16px 80px; }
+    h1{ margin:0 0 10px; font-size:46px; letter-spacing:-0.02em; }
+    .subtitle{
+      margin:0 0 22px;
+      color:var(--muted);
+      font-size:18px;
     }
-    nav a{ color:var(--muted); }
-    nav a strong{ color:var(--text); }
-
-    /* Layout */
-    .hero{
-      display:grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap:18px;
-      align-items:start;
-    }
-    @media (max-width: 860px){
-      .hero{ grid-template-columns:1fr; }
-    }
-
-    h1{ margin:0 0 6px; font-size:38px; letter-spacing:-0.02em; }
-    .subtitle{ margin:0 0 12px; color:var(--muted); font-size:16px; }
-
     .card{
       background:var(--soft);
       border:1px solid var(--border);
-      border-radius:14px;
-      padding:16px;
+      border-radius:16px;
+      padding:18px;
     }
-
-    .btnrow{ display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
+    .btnrow{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
     .btn{
       display:inline-block;
       padding:10px 12px;
-      border-radius:10px;
+      border-radius:12px;
       border:1px solid var(--border);
       background:#fff;
       color:var(--text);
@@ -74,39 +54,9 @@
       color:#fff;
       border-color:var(--text);
     }
-
-    .pill{
-      display:inline-block;
-      padding:4px 10px;
-      border:1px solid var(--border);
-      border-radius:999px;
-      margin:6px 8px 0 0;
-      font-size:14px;
-      color:var(--muted);
-      background:#fff;
-    }
-
-    h2{ margin:30px 0 10px; font-size:22px; }
-    h3{ margin:16px 0 6px; font-size:16px; }
-    ul{ margin:8px 0 0 20px; }
-    .small{ font-size:14px; color:var(--muted); }
-    .section{
-      padding-top:8px;
-    }
-
-    .split{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-    }
-    @media (max-width: 860px){
-      .split{ grid-template-columns:1fr; }
-    }
-
+    .small{ font-size:14px; color:var(--muted); margin-top:14px; }
     footer{
-      margin-top:36px;
-      padding-top:18px;
-      border-top:1px solid var(--border);
+      margin-top:30px;
       color:var(--muted);
       font-size:14px;
     }
@@ -115,159 +65,34 @@
 
 <body>
   <div class="wrap">
+    <h1>Imran Khan</h1>
+    <p class="subtitle">Cryosphere • Glaciers and Glacial Lakes • Remote Sensing</p>
 
-    <!-- Single-page nav (for now). Later you can switch to research.html, publications.html, etc. -->
-    <nav>
-      <a href="index.html"><strong>Home</strong></a>
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Selected Publications</a>
-      <a href="#tools">Methods & Tools</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="card">
+      <p style="margin:0">
+        I am a researcher focusing on glacial lake dynamics under a changing climate,
+        factors controlling the formation and seasonal evolution of supraglacial lakes,
+        and glacier–lake–climate interactions. My work combines satellite remote sensing,
+        geospatial analysis, and hazard modeling to improve understanding of outburst flood
+        risks in high-mountain environments.
+      </p>
 
-    <section class="hero">
-      <div>
-        <h1>Imran Khan</h1>
-        <p class="subtitle">
-          Ph.D. (Civil & Environmental Engineering) • Cryosphere Remote Sensing • Glacial Lakes & Flood Hazards
-        </p>
-
-        <div class="card">
-          <p style="margin:0">
-            I am a Ph.D.-trained researcher focused on advancing glacial lake mapping and monitoring using
-            Synthetic Aperture Radar (SAR), understanding seasonal supraglacial lake dynamics, and linking
-            glacier–lake–climate interactions to outburst flood risk. I use remote sensing and modeling to
-            support hazard assessment and climate-relevant water research.
-          </p>
-
-          <div class="btnrow">
-            <!-- Upload your CV to the repo and name it exactly: cv.pdf -->
-            <a class="btn primary" href="cv.pdf">Download CV (PDF)</a>
-            <a class="btn" href="https://orcid.org/0000-0001-5632-5857" target="_blank" rel="noopener">ORCID</a>
-            <!-- Optional: add LinkedIn or Google Scholar when ready -->
-            <!-- <a class="btn" href="https://scholar.google.com/citations?user=XXXX" target="_blank" rel="noopener">Google Scholar</a> -->
-            <!-- <a class="btn" href="https://www.linkedin.com/in/XXXX" target="_blank" rel="noopener">LinkedIn</a> -->
-          </div>
-
-          <p class="small" style="margin:10px 0 0">
-            Ph.D., University of New Hampshire (Durham, USA) • Dissertation: <em>Advancing Glacial Lake Mapping and Monitoring using SAR</em>
-          </p>
-        </div>
-
-        <div style="margin-top:12px">
-          <span class="pill">Sentinel-1 SAR</span>
-          <span class="pill">Glacial lake mapping</span>
-          <span class="pill">Supraglacial lakes</span>
-          <span class="pill">GLOF risk</span>
-          <span class="pill">Remote sensing + modeling</span>
-          <span class="pill">Subglacial hydrology (interest)</span>
-        </div>
+      <div class="btnrow">
+        <!-- Upload your CV to the repo and name it: cv.pdf -->
+        <a class="btn primary" href="cv.pdf">Download CV</a>
+        <a class="btn" href="mailto:imran.khan@unh.edu">Email</a>
+        <a class="btn" href="https://orcid.org/0000-0001-5632-5857" target="_blank" rel="noopener">ORCID</a>
+        <a class="btn" href="https://github.com/imran-unh" target="_blank" rel="noopener">GitHub</a>
       </div>
 
-      <aside class="card" id="contact">
-        <h2 style="margin-top:0">Contact</h2>
-        <p style="margin:0">
-          Email: <a href="mailto:imran.khan@unh.edu">imran.khan@unh.edu</a><br/>
-          ORCID: <a href="https://orcid.org/0000-0001-5632-5857" target="_blank" rel="noopener">0000-0001-5632-5857</a><br/>
-          GitHub: <a href="https://github.com/imran-unh" target="_blank" rel="noopener">github.com/imran-unh</a>
-        </p>
-
-        <h2 id="about">About</h2>
-        <p style="margin:0">
-          My work combines satellite remote sensing, geospatial analysis, and hydrologic/hazard modeling
-          to characterize glacial lake evolution and flood risks under climate change.
-        </p>
-      </aside>
-    </section>
-
-    <section class="section" id="research">
-      <h2>Current Research Focus</h2>
-
-      <div class="split">
-        <div class="card">
-          <h3>1) SAR-based glacial lake mapping & monitoring</h3>
-          <p style="margin:0">
-            Developing robust workflows for mapping glacial lakes using Sentinel-1 SAR, improving monitoring
-            in cloud-prone, high-relief mountain environments.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>2) Seasonal supraglacial lake dynamics</h3>
-          <p style="margin:0">
-            Multi-year analysis of supraglacial lake seasonal behavior in the Karakoram, linking melt-season
-            conditions, persistence, and drainage patterns to broader climate signals.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>3) Glacier–lake–climate interactions</h3>
-          <p style="margin:0">
-            Examining how lake evolution relates to glacier dynamics, debris cover, and climatic forcing—
-            with implications for downstream impacts and hazard assessment.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>4) Outburst flood (GLOF) hazard modeling</h3>
-          <p style="margin:0">
-            Modeling potential outburst flood scenarios (e.g., channel hydraulics and flow routing) to support
-            risk communication and disaster preparedness in vulnerable regions.
-          </p>
-        </div>
-      </div>
-
-      <h2 style="margin-top:22px">Research Interests</h2>
-      <ul>
-        <li>Glacial lake evolution and flood risks under climate change</li>
-        <li>Remote sensing (SAR + optical) for cryosphere hazard monitoring</li>
-        <li>Subglacial hydrology and glacier–hydrology coupling</li>
-      </ul>
-    </section>
-
-    <section class="section" id="publications">
-      <h2>Selected Recent Publications</h2>
-      <div class="card">
-        <ul style="margin-top:0">
-          <li>
-            <b>2025</b> — Mapping Glacial Lakes in the Upper Indus Basin using Sentinel-1 SAR Data.
-            <em>Preprints</em>.
-            <a href="https://doi.org/10.20944/preprints202509.0422.v1" target="_blank" rel="noopener">DOI</a>
-          </li>
-          <li>
-            <b>2024</b> — Glacial Lake Mapping and Monitoring: Progress, Challenges, and Future Directions.
-            <em>In review</em>.
-          </li>
-          <li>
-            <b>2023</b> — Assessing glacial lake outburst flood potential using geospatial techniques:
-            a case study of western Gilgit-Baltistan, Pakistan.
-            <em>Arabian Journal of Geosciences</em>.
-            <a href="https://doi.org/10.1007/s12517-022-11088-0" target="_blank" rel="noopener">DOI</a>
-          </li>
-        </ul>
-
-        <p class="small" style="margin:10px 0 0">
-          (You can later move the full list to a dedicated Publications page.)
-        </p>
-      </div>
-    </section>
-
-    <section class="section" id="tools">
-      <h2>Methods & Tools</h2>
-      <div class="card">
-        <ul style="margin-top:0">
-          <li><b>Remote sensing & GIS:</b> Sentinel-1 SAR workflows, optical imagery, Google Earth Engine, QGIS</li>
-          <li><b>Programming:</b> Python, R</li>
-          <li><b>Modeling:</b> Outburst flood / hydraulics tools (e.g., HEC-RAS, GeoClaw)</li>
-        </ul>
-      </div>
-    </section>
+      <p class="small">
+        University of New Hampshire (Ph.D.) • Dissertation: <em>Advancing Glacial Lake Mapping and Monitoring using Synthetic Aperture Radar Data</em>
+      </p>
+    </div>
 
     <footer>
-      <div>© <span id="yr"></span> Imran Khan • Built with GitHub Pages</div>
+      © <span id="yr"></span> Imran Khan • Built with GitHub Pages
     </footer>
-
   </div>
 
   <script>
