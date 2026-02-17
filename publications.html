@@ -26,16 +26,44 @@
     }
     a{ color:var(--link); text-decoration:none; }
     a:hover{ text-decoration:underline; }
-    .wrap{ max-width:var(--max); margin:0 auto; padding:40px 16px 80px; }
+    .wrap{ max-width:var(--max); margin:0 auto; padding:34px 16px 80px; }
 
-    nav{
-      display:flex; flex-wrap:wrap; gap:14px;
+    /* Top nav */
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
       padding:10px 0 18px;
       border-bottom:1px solid var(--border);
       margin-bottom:26px;
+      gap:14px;
     }
-    nav a{ color:var(--muted); }
-    nav a strong{ color:var(--text); }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      color:var(--text); text-decoration:none; font-weight:800;
+      letter-spacing:0.02em;
+    }
+    .brand .ik{
+      width:38px; height:38px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:var(--soft);
+      display:flex; align-items:center; justify-content:center;
+      font-weight:900;
+    }
+    .navlinks{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .btn{
+      display:inline-block;
+      padding:9px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:#fff;
+      color:var(--text);
+      font-weight:650;
+    }
+    .btn.active{
+      background:var(--text);
+      color:#fff;
+      border-color:var(--text);
+    }
 
     h1{ margin:0 0 8px; font-size:34px; letter-spacing:-0.02em; }
     .subtitle{ margin:0 0 18px; color:var(--muted); }
@@ -47,22 +75,10 @@
       padding:18px;
       margin:14px 0;
     }
-
     h2{ margin:26px 0 10px; font-size:20px; }
     ul{ margin:10px 0 0 20px; }
     li{ margin:10px 0; }
     .small{ font-size:14px; color:var(--muted); }
-
-    .btnrow{ display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
-    .btn{
-      display:inline-block;
-      padding:10px 12px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background:#fff;
-      color:var(--text);
-      font-weight:650;
-    }
 
     footer{
       margin-top:32px;
@@ -77,30 +93,22 @@
 <body>
   <div class="wrap">
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="publications.html"><strong>Publications</strong></a>
-      <a href="cv.pdf">CV</a>
-      <a href="https://orcid.org/0000-0001-5632-5857" target="_blank" rel="noopener">ORCID</a>
-      <a href="https://github.com/imran-unh" target="_blank" rel="noopener">GitHub</a>
-    </nav>
+    <div class="nav">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="ik">IK</span>
+      </a>
+
+      <div class="navlinks">
+        <a class="btn" href="index.html">Home</a>
+        <a class="btn active" href="publications.html">Publications</a>
+        <a class="btn" href="contact.html">Contact</a>
+      </div>
+    </div>
 
     <h1>Publications</h1>
     <p class="subtitle">
-      Peer-reviewed publications, manuscripts, and conference presentations in cryosphere science, glaciology, and remote sensing.
+      Peer-reviewed publications, manuscripts, and conference presentations.
     </p>
-
-    <div class="card">
-      <div class="btnrow">
-        <a class="btn" href="cv.pdf">Download CV</a>
-        <a class="btn" href="mailto:imran.khan@unh.edu">Email</a>
-        <!-- Add your Google Scholar later -->
-        <!-- <a class="btn" href="https://scholar.google.com/citations?user=XXXX" target="_blank" rel="noopener">Google Scholar</a> -->
-      </div>
-      <p class="small" style="margin:12px 0 0;">
-        Last updated from my website CV document.
-      </p>
-    </div>
 
     <h2>Peer-Reviewed Publications</h2>
     <div class="card">
@@ -108,28 +116,28 @@
         <li>
           Khan, I., Vardaman, M., Johnston, J., and Jacobs, J. M. (2025).
           <i>Glacial lake mapping: Progress, challenges, and future directions.</i>
-          Arctic, Antarctic, and Alpine Research, 57(1).
+          <span class="small">Arctic, Antarctic, and Alpine Research, 57(1).</span>
           <a href="https://doi.org/10.1080/15230430.2025.2592365" target="_blank" rel="noopener">DOI</a>
         </li>
 
         <li>
           Khan, I., Jacobs, J. M., Johnston, J. M., and Vardaman, M. (2025).
           <i>Mapping Glacial Lakes in the Upper Indus Basin (UIB) Using Synthetic Aperture Radar (SAR) Data.</i>
-          Glacies, 2(4): 13.
+          <span class="small">Glacies, 2(4): 13.</span>
           <a href="https://doi.org/10.3390/glacies2040013" target="_blank" rel="noopener">DOI</a>
         </li>
 
         <li>
           Khan, I., Ullah, A., Zaidi, A. Z., and Panhwar, V. (2023).
           <i>Assessing glacial lake outburst flood potential using geospatial techniques: a case study of the western part of Gilgit-Baltistan, Pakistan.</i>
-          Arab Journal of Geosciences, 16(49), 1–10.
+          <span class="small">Arab Journal of Geosciences, 16(49), 1–10.</span>
           <a href="https://doi.org/10.1007/s12517-022-11088-0" target="_blank" rel="noopener">DOI</a>
         </li>
 
         <li>
           Verfaillie, M., Cho, E., Dwyre, L., Khan, I., Wagner, C., Jacobs, J. M., and Hunsaker, A. (2023).
           <i>UAS remote sensing applications to abrupt cold region hazards.</i>
-          Frontiers in Remote Sensing, 4, 1095275.
+          <span class="small">Frontiers in Remote Sensing, 4, 1095275.</span>
           <a href="https://doi.org/10.3389/frsen.2023.1095275" target="_blank" rel="noopener">DOI</a>
         </li>
       </ul>
@@ -149,10 +157,6 @@
           <span class="small">In preparation.</span>
         </li>
       </ul>
-
-      <p class="small" style="margin-top:12px;">
-        
-      </p>
     </div>
 
     <h2>Conference Presentations</h2>
@@ -161,22 +165,22 @@
         <li>
           Khan, I., Jacobs, J. M. (2025).
           <i>A Multi-year Analysis of Supraglacial Lake Seasonal Dynamics in the Karakoram.</i>
-          Abstract, Northeast Glaciology Meeting, New York.
+          <span class="small">Northeast Glaciology Meeting, New York.</span>
         </li>
         <li>
           Khan, I., Vardaman, M., Johnston, J. M., and Jacobs, J. M. (2024).
           <i>Glacial Lake Mapping and Monitoring: Challenges, Emerging Trends, and Future Directions.</i>
-          Abstract, American Geophysical Union (AGU) Fall Meeting, Washington, D.C., December 2024.
+          <span class="small">AGU Fall Meeting, Washington, D.C., December 2024.</span>
         </li>
         <li>
           Khan, I., Jacobs, J. M., and Cho, E. (2023).
           <i>Using Sentinel-1 Synthetic Aperture Radar Data to Map and Monitor Glacial Lakes in the Upper Indus Basin.</i>
-          Abstract, AGU Fall Meeting, San Francisco, December 2023.
+          <span class="small">AGU Fall Meeting, San Francisco, December 2023.</span>
         </li>
         <li>
           Khan, I., Jacobs, J. M., and Cho, E. (2022).
           <i>Monitoring Temporal Variation in Glacial Lake Extents in the Upper Indus Basin using Sentinel-1 Synthetic Aperture Radar Data.</i>
-          Abstract, AGU Fall Meeting, Chicago, December 2022.
+          <span class="small">AGU Fall Meeting, Chicago, December 2022.</span>
         </li>
       </ul>
     </div>
