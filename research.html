@@ -28,7 +28,7 @@
     a:hover{ text-decoration:underline; }
     .wrap{ max-width:var(--max); margin:0 auto; padding:34px 16px 80px; }
 
-    /* Top bar (IK removed, right-aligned nav like homepage) */
+    /* Top bar (IK removed, right-aligned nav) */
     .nav{
       display:flex; align-items:center; justify-content:flex-end;
       padding:10px 0 18px;
@@ -88,22 +88,26 @@
       background:#fff;
     }
 
-    /* NEW: Thumbnails inside PhD theme card */
+    /* Thumbnail figures inside PhD theme */
     .thumb-row{
       display:grid;
       grid-template-columns: 1fr 1fr;
       gap:12px;
-      margin-top:14px;
+      margin-top:16px;
     }
     .thumb{
       border:1px solid var(--border);
       border-radius:14px;
       overflow:hidden;
       background:#fff;
+      transition: transform 0.15s ease;
+    }
+    .thumb:hover{
+      transform: translateY(-2px);
     }
     .thumb img{
       width:100%;
-      height:160px;
+      height:170px;
       object-fit: cover;
       object-position: 50% 25%;
       display:block;
@@ -115,20 +119,18 @@
       color:var(--muted);
       display:flex;
       justify-content:space-between;
-      gap:10px;
       align-items:center;
       background:#fff;
+      gap:10px;
     }
     .thumb-cap a{
       font-weight:650;
       color:var(--text);
-      text-decoration:none;
       white-space:nowrap;
     }
-    .thumb-cap a:hover{ text-decoration:underline; }
 
     .paper-link{
-      margin-top:12px;
+      margin-top:14px;
       font-size:14px;
       color:var(--muted);
     }
@@ -139,7 +141,7 @@
 
     @media (max-width: 860px){
       .thumb-row{ grid-template-columns: 1fr; }
-      .thumb img{ height:180px; }
+      .thumb img{ height:200px; }
     }
 
     footer{
@@ -155,7 +157,7 @@
 <body>
   <div class="wrap">
 
-    <!-- Nav (IK removed) -->
+    <!-- Navigation (IK removed) -->
     <div class="nav">
       <div class="navlinks">
         <a class="btn" href="index.html">Home</a>
@@ -204,35 +206,36 @@
         <li>Connecting lake dynamics to glacier setting, surface conditions, and climatic forcing.</li>
       </ul>
 
-      <!-- NEW: Two thumbnails at the end of the PhD Theme box -->
+      <!-- Figures as thumbnails -->
       <div class="thumb-row">
 
         <div class="thumb">
-          <a href="1.png" target="_blank" rel="noopener" aria-label="Open Figure 1 full size">
-            <img src="1.png" alt="Figure 1 from Khan et al. (2025)">
+          <a href="1.png" target="_blank" rel="noopener">
+            <img src="1.png" alt="SAR and Optical-based Lake Outlines">
           </a>
           <div class="thumb-cap">
-            <span>Figure 1</span>
+            <span>SAR & Optical-based Lake Outlines</span>
             <a href="1.png" target="_blank" rel="noopener">View full</a>
           </div>
         </div>
 
         <div class="thumb">
-          <a href="2.png" target="_blank" rel="noopener" aria-label="Open Figure 2 full size">
-            <img src="2.png" alt="Figure 2 from Khan et al. (2025)">
+          <a href="2.png" target="_blank" rel="noopener">
+            <img src="2.png" alt="Upper Indus Lakes from SAR">
           </a>
           <div class="thumb-cap">
-            <span>Figure 2</span>
+            <span>Upper Indus Lakes from SAR</span>
             <a href="2.png" target="_blank" rel="noopener">View full</a>
           </div>
         </div>
 
       </div>
 
-      <!-- NEW: DOI hyperlink -->
+      <!-- DOI Link -->
       <div class="paper-link">
-        Related paper: <a href="https://doi.org/10.3390/glacies2040013" target="_blank" rel="noopener">
-          Khan et al. (2025) — https://doi.org/10.3390/glacies2040013
+        Related paper:
+        <a href="https://doi.org/10.3390/glacies2040013" target="_blank" rel="noopener">
+          Khan et al. (2025)
         </a>
       </div>
     </div>
@@ -300,7 +303,6 @@
         <li>Assessing the dynamics of glacial lakes and GLOF triggers under climate change</li>
         <li>Linking physical process understanding to actionable risk assessments</li>
       </ul>
-      <p class="small" style="margin:12px 0 0;"></p>
     </div>
 
     <footer>
