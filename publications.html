@@ -28,26 +28,12 @@
     a:hover{ text-decoration:underline; }
     .wrap{ max-width:var(--max); margin:0 auto; padding:34px 16px 80px; }
 
-    /* Top nav */
+    /* Top nav (IK removed, right-aligned like other pages) */
     .nav{
-      display:flex; align-items:center; justify-content:space-between;
+      display:flex; align-items:center; justify-content:flex-end;
       padding:10px 0 18px;
       border-bottom:1px solid var(--border);
       margin-bottom:26px;
-      gap:14px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:10px;
-      color:var(--text); text-decoration:none; font-weight:800;
-      letter-spacing:0.02em;
-    }
-    .brand .ik{
-      width:38px; height:38px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background:var(--soft);
-      display:flex; align-items:center; justify-content:center;
-      font-weight:900;
     }
     .navlinks{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
     .btn{
@@ -93,11 +79,8 @@
 <body>
   <div class="wrap">
 
+    <!-- Navigation (no IK button) -->
     <div class="nav">
-      <a class="brand" href="index.html" aria-label="Home">
-        <span class="ik">IK</span>
-      </a>
-
       <div class="navlinks">
         <a class="btn" href="index.html">Home</a>
         <a class="btn" href="research.html">Research</a>
