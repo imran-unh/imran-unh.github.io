@@ -28,26 +28,12 @@
     a:hover{ text-decoration:underline; }
     .wrap{ max-width:var(--max); margin:0 auto; padding:34px 16px 80px; }
 
-    /* Top bar */
+    /* Top bar (IK removed, right-aligned nav like homepage) */
     .nav{
-      display:flex; align-items:center; justify-content:space-between;
+      display:flex; align-items:center; justify-content:flex-end;
       padding:10px 0 18px;
       border-bottom:1px solid var(--border);
       margin-bottom:26px;
-      gap:14px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:10px;
-      color:var(--text); text-decoration:none; font-weight:800;
-      letter-spacing:0.02em;
-    }
-    .brand .ik{
-      width:38px; height:38px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background:var(--soft);
-      display:flex; align-items:center; justify-content:center;
-      font-weight:900;
     }
     .navlinks{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
     .btn{
@@ -102,6 +88,60 @@
       background:#fff;
     }
 
+    /* NEW: Thumbnails inside PhD theme card */
+    .thumb-row{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin-top:14px;
+    }
+    .thumb{
+      border:1px solid var(--border);
+      border-radius:14px;
+      overflow:hidden;
+      background:#fff;
+    }
+    .thumb img{
+      width:100%;
+      height:160px;
+      object-fit: cover;
+      object-position: 50% 25%;
+      display:block;
+    }
+    .thumb-cap{
+      padding:10px 12px;
+      border-top:1px solid var(--border);
+      font-size:13px;
+      color:var(--muted);
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      align-items:center;
+      background:#fff;
+    }
+    .thumb-cap a{
+      font-weight:650;
+      color:var(--text);
+      text-decoration:none;
+      white-space:nowrap;
+    }
+    .thumb-cap a:hover{ text-decoration:underline; }
+
+    .paper-link{
+      margin-top:12px;
+      font-size:14px;
+      color:var(--muted);
+    }
+    .paper-link a{
+      color:var(--link);
+      font-weight:650;
+    }
+
+    @media (max-width: 860px){
+      .thumb-row{ grid-template-columns: 1fr; }
+      .thumb img{ height:180px; }
+    }
+
     footer{
       margin-top:32px;
       padding-top:18px;
@@ -115,11 +155,8 @@
 <body>
   <div class="wrap">
 
+    <!-- Nav (IK removed) -->
     <div class="nav">
-      <a class="brand" href="index.html" aria-label="Home">
-        <span class="ik">IK</span>
-      </a>
-
       <div class="navlinks">
         <a class="btn" href="index.html">Home</a>
         <a class="btn active" href="research.html">Research</a>
@@ -136,9 +173,10 @@
     <div class="card">
       <p style="margin:0">
         My research uses satellite remote sensing and geospatial analysis to monitor glacial lakes and
-        supraglacial hydrology in high-mountain environments. A central goal of my Ph.D. work has been to
-        improve glacial lake detection and monitoring using Synthetic Aperture Radar (SAR), and to connect
-        observed lake dynamics to glacier-lake-climate interactions and outburst flood (GLOF) hazards.
+        supraglacial hydrology in high-mountain environments. A central goal of my work has been to
+        improve glacial lake detection and monitoring using Synthetic Aperture Radar (SAR), to connect
+        observed lake dynamics to glacier-lake-climate interactions, and to understand how climate change
+        impacts outburst flood (GLOF) triggers.
       </p>
 
       <div style="margin-top:10px;">
@@ -152,7 +190,7 @@
 
     <h2>Ph.D. Research Theme</h2>
     <div class="card">
-      <h3>Advancing glacial lake mapping and monitoring using SAR</h3>
+      <h3>Advancing glacial lake mapping and monitoring</h3>
       <p style="margin:0">
         Many high-mountain regions experience persistent cloud cover, seasonal snow, and complex terrain that
         limit optical-only monitoring. SAR enables more consistent lake mapping through clouds and low-light
@@ -165,20 +203,52 @@
         <li>Evaluating seasonal and interannual patterns in lake extent and persistence.</li>
         <li>Connecting lake dynamics to glacier setting, surface conditions, and climatic forcing.</li>
       </ul>
+
+      <!-- NEW: Two thumbnails at the end of the PhD Theme box -->
+      <div class="thumb-row">
+
+        <div class="thumb">
+          <a href="1.png" target="_blank" rel="noopener" aria-label="Open Figure 1 full size">
+            <img src="1.png" alt="Figure 1 from Khan et al. (2025)">
+          </a>
+          <div class="thumb-cap">
+            <span>Figure 1</span>
+            <a href="1.png" target="_blank" rel="noopener">View full</a>
+          </div>
+        </div>
+
+        <div class="thumb">
+          <a href="2.png" target="_blank" rel="noopener" aria-label="Open Figure 2 full size">
+            <img src="2.png" alt="Figure 2 from Khan et al. (2025)">
+          </a>
+          <div class="thumb-cap">
+            <span>Figure 2</span>
+            <a href="2.png" target="_blank" rel="noopener">View full</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- NEW: DOI hyperlink -->
+      <div class="paper-link">
+        Related paper: <a href="https://doi.org/10.3390/glacies2040013" target="_blank" rel="noopener">
+          Khan et al. (2025) — https://doi.org/10.3390/glacies2040013
+        </a>
+      </div>
     </div>
 
     <h2>Recent & Ongoing Research Areas</h2>
     <div class="grid">
 
       <div class="card">
-        <h3>1) SAR-based glacial lake monitoring</h3>
+        <h3>1) SAR-based glacial lake mapping</h3>
         <p style="margin:0">
           Building automated and semi-automated approaches for mapping glacial lakes using SAR, aimed at
           improving consistency across seasons and reducing sensitivity to atmospheric limitations.
         </p>
         <ul>
           <li>Sentinel-1 processing and lake classification</li>
-          <li>Regional-scale monitoring in mountainous terrain</li>
+          <li>Regional-scale mapping in mountainous terrain</li>
         </ul>
       </div>
 
@@ -190,7 +260,6 @@
         </p>
         <ul>
           <li>Multi-year seasonal analysis</li>
-          <li>Patterns of lake persistence and drainage</li>
           <li>Links to melt-season conditions and glacier surface state</li>
         </ul>
       </div>
@@ -231,8 +300,7 @@
         <li>Assessing the dynamics of glacial lakes and GLOF triggers under climate change</li>
         <li>Linking physical process understanding to actionable risk assessments</li>
       </ul>
-      <p class="small" style="margin:12px 0 0;">
-      </p>
+      <p class="small" style="margin:12px 0 0;"></p>
     </div>
 
     <footer>
