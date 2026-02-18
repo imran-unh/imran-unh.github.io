@@ -30,24 +30,10 @@
 
     /* Top bar */
     .nav{
-      display:flex; align-items:center; justify-content:space-between;
+      display:flex; align-items:center; justify-content:flex-end;
       padding:10px 0 18px;
       border-bottom:1px solid var(--border);
       margin-bottom:34px;
-      gap:14px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:10px;
-      color:var(--text); text-decoration:none; font-weight:800;
-      letter-spacing:0.02em;
-    }
-    .brand .ik{
-      width:38px; height:38px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background:var(--soft);
-      display:flex; align-items:center; justify-content:center;
-      font-weight:900;
     }
     .navlinks{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
     .btn{
@@ -201,17 +187,8 @@
 <body>
   <div class="wrap">
 
+    <!-- ONE nav only (fixed) -->
     <div class="nav">
-      <!-- Navigation buttons aligned right -->
-      <div class="navlinks" style="margin-left:auto;">
-        <a class="btn active" href="index.html">Home</a>
-        <a class="btn" href="research.html">Research</a>
-        <a class="btn" href="publications.html">Publications</a>
-        <a class="btn" href="media.html">Media</a>
-      </div>
-    </div>
-
-      <!-- Buttons on top-right -->
       <div class="navlinks">
         <a class="btn active" href="index.html">Home</a>
         <a class="btn" href="research.html">Research</a>
@@ -238,7 +215,7 @@
             <span>University of New Hampshire</span>
           </div>
 
-          <!-- Email (EDIT THIS) -->
+          <!-- Email -->
           <div class="meta-item">
             <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
@@ -258,7 +235,7 @@
             </a>
           </div>
 
-          <!-- ORCID (EDIT ORCID ID if needed) -->
+          <!-- ORCID -->
           <div class="meta-item">
             <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/>
@@ -270,7 +247,7 @@
             </a>
           </div>
 
-          <!-- LinkedIn (EDIT LINK) -->
+          <!-- LinkedIn -->
           <div class="meta-item">
             <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M6.5 10.5V18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
@@ -307,7 +284,6 @@
           </p>
         </div>
 
-        <!-- NEW: Research Interests -->
         <div class="card" style="margin-top:14px;">
           <h2>Research Interests</h2>
           <ul class="interests">
@@ -321,7 +297,6 @@
       </div>
     </div>
 
-    <!-- Glacier Image (repo root) -->
     <div class="hero-image">
       <img src="baltoro-glacier.jpg" alt="Baltoro Glacier">
       <div class="image-label-left">Baltoro Glacier</div>
