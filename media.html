@@ -28,25 +28,12 @@
     a:hover{ text-decoration:underline; }
     .wrap{ max-width:var(--max); margin:0 auto; padding:34px 16px 80px; }
 
-    /* Navigation */
+    /* Navigation (IK removed, right-aligned) */
     .nav{
-      display:flex; align-items:center; justify-content:space-between;
+      display:flex; align-items:center; justify-content:flex-end;
       padding:10px 0 18px;
       border-bottom:1px solid var(--border);
       margin-bottom:26px;
-      gap:14px;
-    }
-    .brand{
-      display:flex; align-items:center;
-      color:var(--text); text-decoration:none; font-weight:800;
-    }
-    .ik{
-      width:38px; height:38px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background:var(--soft);
-      display:flex; align-items:center; justify-content:center;
-      font-weight:900;
     }
     .navlinks{ display:flex; gap:10px; flex-wrap:wrap; }
     .btn{
@@ -103,8 +90,8 @@
     }
     .thumb{
       width:100%;
-      height:240px;            /* thumbnail height */
-      object-fit:cover;        /* crops nicely */
+      height:240px;
+      object-fit:cover;
       object-position: 50% 20%;
       display:block;
       cursor: zoom-in;
@@ -157,12 +144,8 @@
 <body>
   <div class="wrap">
 
-    <!-- Navigation -->
+    <!-- Navigation (IK removed) -->
     <div class="nav">
-      <a class="brand" href="index.html" aria-label="Home">
-        <div class="ik">IK</div>
-      </a>
-
       <div class="navlinks">
         <a class="btn" href="index.html">Home</a>
         <a class="btn" href="research.html">Research</a>
@@ -243,7 +226,6 @@
       </div>
 
       <div class="note">
-
       </div>
     </div>
 
